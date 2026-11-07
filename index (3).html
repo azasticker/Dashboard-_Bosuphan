@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0877ae">
+  <title>Dashboard สอน.บ่อสุพรรณ</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#f4f7fa;font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+    iframe{display:block;width:100%;height:100%;height:100dvh;border:0;background:white}
+    .loading{position:fixed;inset:0;display:grid;place-items:center;background:#f4f7fa;color:#135f86;z-index:2;transition:opacity .3s ease}
+    .loading.hidden{opacity:0;pointer-events:none}
+    .loading span{font-size:16px}
+  </style>
+</head>
+<body>
+  <div id="loading" class="loading" role="status"><span>กำลังเปิด Dashboard สอน.บ่อสุพรรณ…</span></div>
+  <iframe id="dashboard" title="Dashboard สอน.บ่อสุพรรณ" src="https://script.google.com/macros/s/AKfycbzLb5tOPnTg8lKQyA7IjP3FoLnej5erCbthhdzgIa2D5eBCbGIzbpsfFmf1cpdYv5Gbcw/exec" allow="fullscreen; clipboard-read; clipboard-write; geolocation" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <script>
+    const loading=document.getElementById('loading');
+    document.getElementById('dashboard').addEventListener('load',()=>{loading.classList.add('hidden');setTimeout(()=>loading.remove(),350)});
+  </script>
+</body>
+</html>
